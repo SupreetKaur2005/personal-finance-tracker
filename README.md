@@ -46,16 +46,31 @@ graph TD
 
 ---
 
-## Quick Start (Windows Environment)
+## 🚀 Quick Start
 
-To instantly boot up and review this project, double-click or execute the bundled batch handlers in your root directory:
+To instantly boot up and review this project, use the bundled scripts for your respective operating system.
 
+### Windows Users
+Double-click or execute the bundled `.bat` handlers in your root directory:
 ```powershell
 :: 1. Build the Env, Map Database schemas via Alembic, and load massive SQL seed data
 .\scripts\setupdev.bat
 
 :: 2. Start the Frontend & Backend hot-reload servers alongside the OpenAPI compiler
 .\scripts\runapplication.bat
+```
+
+### macOS / Linux Users
+Execute the newly provided `.sh` bash scripts from your terminal:
+```bash
+# Provide execution context
+chmod +x scripts/setupdev.sh scripts/runapplication.sh
+
+# 1. Build the Env, Database, and Seed Data
+./scripts/setupdev.sh
+
+# 2. Start all services via background polling and openapi compilation
+./scripts/runapplication.sh
 ```
 
 > **Note:** The `runapplication.bat` script handles automatic python SDK generation directly against the live FastAPI spec! All you have to do is sit back and watch it compile.
@@ -77,30 +92,38 @@ cd backend
 env\Scripts\python.exe -m pytest tests/
 ```
 
-### Testing the Auto-Generated SDK
-The `generate_sdk.py` script automatically places a raw, fully modeled `finance_sdk` interface library strictly bound to our endpoints in your root directory.
-You can execute the bundled demonstration script to bypass the React client and hit the live backend API entirely via these exact SDK model abstractions!
+### SDK Demo
 
-*Note: The demo script forces `127.0.0.1` connectivity specifically to skirt a known `urllib3` bug on modern Windows distributions where `localhost` traffic is incorrectly routed to un-bound IPv6 loopbacks (`::1`).*
+An SDK (Software Development Kit) is a toolkit that lets other computer programs talk to your application without needing to click around the React website. 
 
+To prove this works perfectly, script (`sdk_demo.py`) acts like an automated robot. It creates a transaction, checks your ledger, categorizes it, and deletes it—all in a fraction of a second!
+
+> [!WARNING]
+> Your backend must be running first! Make sure you executed `.\scripts\runapplication.bat` and left the popup terminal windows open. The robot needs a living server to talk to!
+
+**How to run:**
 ```powershell
-# Run an end-to-end CRUD simulation using the generated python classes:
-C:\Python313\python.exe sdk_demo.py --sdk
+# Make sure your Python path matches your computer!
+C:\Python313\python.exe sdk_demo.py
 ```
 
 ---
 
-## PowerShell Troubleshooting Context
+## PowerShell Troubleshooting
 
-If you prefer to skip the `.bat` files and prefer initializing servers manually strictly within PowerShell, note that PowerShell executes sub-shells that **do not persist `.bat` environment variable context** back to your primary session. 
+Using the `setupdev.bat` and `runapplication.bat` scripts is the easiest way to launch the app. However, if you try to type commands manually in PowerShell, you might see a scary error like `ModuleNotFoundError: No module named 'pydantic_settings'`.
 
-If you attempt to blindly run `pytest` or `uvicorn` and receive `ModuleNotFoundError: No module named 'pydantic_settings'`, you missed the virtual environment! You must explicitly call the virtual executable:
+**Why does this happen?**
+PowerShell sometimes ignores the "virtual environment" (the isolated folder named `env` where we safely installed all your backend server files).
+
+**How to fix it:**
+Instead of just typing `uvicorn` and hoping PowerShell guesses where it is, you need to provide the exact, direct path to the Python program hidden inside the `env` folder:
 
 ```powershell
-# ❌ INCORRECT:
+# ❌ Wrong way (PowerShell forgets the env folder)
 env\Scripts\activate.bat
 uvicorn app.main:app
 
-# ✅ CORRECT: Bypassing the Activate context errors entirely
+# ✅ Right way (Points directly to the correct Python inside the backend folder)
 C:\work\personal-finance-tracker\backend\env\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 ```

@@ -21,7 +21,7 @@ def demo_with_requests():
     # Create a transaction
     print("1️⃣  Creating a transaction...")
     transaction_data = {
-        "description": "Lunch at McDonald's",
+        "description": "Dinner at Burger King",
         "amount": 15.50,
         "transaction_type": "expense"
     }

@@ -42,7 +42,6 @@ graph TD
 3. **Analytics & Aggregation Engine**: Pre-compiles complex financial metrics into grouped payload hashes (`Income`, `Expense`, `Net Cashflow`) mapping exclusively to the Dashboard for instantaneous retrieval.
 4. **Premium Minimalist UI**: A stark, high-contrast, edge-to-edge React interface. Includes dynamic features like real-time state mutations, AI auto-suggest category buttons, inline row categorizations, and flat-file CSV exports.
 5. **Profile & Currency Localization**: A global settings modal persists user identity and dynamically propagates chosen fiat currencies (`$`, `€`, `£`, `¥`) recursively down through every statistic card, input form, and rendering ledger row using strictly browser `localStorage`.
-6. **Expandable Ledger Engine**: The layout dynamically shape-shifts! It toggles the Transaction entry widget off-screen enabling the central Ledger table to seamlessly span 100% full-width for extensive line-item financial review alongside date pagination.
 
 ---
 

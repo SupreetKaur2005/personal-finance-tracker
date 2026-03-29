@@ -15,7 +15,7 @@ graph TD
     
     subgraph Python Backend Services
         Fast -- "SQLAlchemy ORM" --> DB[(🗄️ SQLite Database)]
-        Fast -- "Transaction Data" --> ML[🧠 Smart Categorizer]
+        Fast -- "Transaction Data" --> RuleEngine[⚙️ Rule-Based Categorizer]
         Fast -- "String Distance" --> Dedup[🔍 Duplicate Detector]
         Fast -- "Aggregation" --> Sum[📊 Analytics Engine]
     end
@@ -37,10 +37,10 @@ graph TD
 
 ## Core Application Features
 
-1. **Smart Categorization Engine**: Dynamically auto-tags string descriptions ("Uber" → `transportation`, "McDonald's" → `dining`, etc.) automatically.
+1. **Smart Categorization Engine**: Dynamically auto-tags string descriptions ("Uber" → `transportation`, "McDonald's" → `dining`, etc.) using a high-performance rule-based regex library.
 2. **Duplicate Anomaly Detection**: Advanced fuzzy-matching logic via `difflib` evaluates string similarity alongside amount variance (5%) within a rolling 30-minute deduplication threshold.
 3. **Analytics & Aggregation Engine**: Pre-compiles complex financial metrics into grouped payload hashes (`Income`, `Expense`, `Net Cashflow`) mapping exclusively to the Dashboard for instantaneous retrieval.
-4. **Premium Minimalist UI**: A stark, high-contrast, edge-to-edge React interface. Includes dynamic features like real-time state mutations, AI auto-suggest category buttons, inline row categorizations, and flat-file CSV exports.
+4. **Premium Minimalist UI**: A stark, high-contrast, edge-to-edge React interface. Includes dynamic features like real-time state mutations, Smart auto-suggest category buttons, inline row categorizations, and flat-file CSV exports.
 5. **Profile & Currency Localization**: A global settings modal persists user identity and dynamically propagates chosen fiat currencies (`$`, `€`, `£`, `¥`) recursively down through every statistic card, input form, and rendering ledger row using strictly browser `localStorage`.
 
 ---

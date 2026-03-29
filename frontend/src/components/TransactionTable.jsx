@@ -203,7 +203,7 @@ const TransactionTable = ({ refreshTrigger, currency = '$' }) => {
                             {tx.category || 'Uncategorized'}
                          </span>
                          {tx.auto_tagged && (
-                             <span title="Auto-tagged by AI" className="text-slate-400">
+                             <span title="Auto-tagged by Rule Engine" className="text-slate-400">
                                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                              </span>
                          )}

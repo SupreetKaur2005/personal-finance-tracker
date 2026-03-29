@@ -101,7 +101,7 @@ class CategoryLibrary:
     ]
 
 class SmartCategorizer:
-    """Production-grade categorizer with fallback logic"""
+    """Rule-based transactional categorizer utilizing predefined regex patterns and priority-weighted matching."""
     
     def __init__(self):
         # Sort by priority (highest first)

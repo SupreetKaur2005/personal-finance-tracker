@@ -1,6 +1,6 @@
 # Personal Finance Tracker
 
-A full-fledged, production-ready Personal Finance Tracker built to demonstrate full-stack mastery, API precision, and ML-ready smart logic featuring a premium "Swiss Bank" minimalist aesthetic.
+A full-fledged, production-ready Personal Finance Tracker built to demonstrate full-stack mastery, API precision, and ML-ready smart logic featuring a premium minimalist aesthetic.
 
 ---
 

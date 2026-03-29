@@ -46,7 +46,7 @@ graph TD
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 To instantly boot up and review this project, use the bundled scripts for your respective operating system.
 

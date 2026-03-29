@@ -12,13 +12,14 @@ settings = get_settings()
 app = FastAPI(
     title=settings.API_TITLE,
     version=settings.API_VERSION,
-    description="Personal Finance Tracker API"
+    description="Personal Finance Tracker API",
+    redirect_slashes=False,
 )
 
 # Add CORS middleware for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:8000"],
+    allow_origin_regex=r"http://localhost:\d+",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

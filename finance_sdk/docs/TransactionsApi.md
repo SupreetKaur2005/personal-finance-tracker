@@ -6,11 +6,11 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**batch_reclassify_transactions_batch_reclassify_patch**](TransactionsApi.md#batch_reclassify_transactions_batch_reclassify_patch) | **PATCH** /transactions/batch/reclassify | Batch Reclassify
 [**bulk_import_transactions_transactions_batch_import_post**](TransactionsApi.md#bulk_import_transactions_transactions_batch_import_post) | **POST** /transactions/batch/import | Bulk Import Transactions
-[**create_transaction_transactions_post**](TransactionsApi.md#create_transaction_transactions_post) | **POST** /transactions/ | Create Transaction
+[**create_transaction_transactions_post**](TransactionsApi.md#create_transaction_transactions_post) | **POST** /transactions | Create Transaction
 [**delete_transaction_transactions_transaction_id_delete**](TransactionsApi.md#delete_transaction_transactions_transaction_id_delete) | **DELETE** /transactions/{transaction_id} | Delete Transaction
 [**get_financial_insights_transactions_analytics_insights_get**](TransactionsApi.md#get_financial_insights_transactions_analytics_insights_get) | **GET** /transactions/analytics/insights | Get Financial Insights
 [**get_summary_transactions_summary_get**](TransactionsApi.md#get_summary_transactions_summary_get) | **GET** /transactions/summary | Get Summary
-[**list_transactions_transactions_get**](TransactionsApi.md#list_transactions_transactions_get) | **GET** /transactions/ | List Transactions
+[**list_transactions_transactions_get**](TransactionsApi.md#list_transactions_transactions_get) | **GET** /transactions | List Transactions
 [**reclassify_transaction_transactions_transaction_id_reclassify_patch**](TransactionsApi.md#reclassify_transaction_transactions_transaction_id_reclassify_patch) | **PATCH** /transactions/{transaction_id}/reclassify | Reclassify Transaction
 [**suggest_category_transactions_suggest_category_post**](TransactionsApi.md#suggest_category_transactions_suggest_category_post) | **POST** /transactions/suggest-category | Suggest Category
 [**update_transaction_status_transactions_transaction_id_status_patch**](TransactionsApi.md#update_transaction_status_transactions_transaction_id_status_patch) | **PATCH** /transactions/{transaction_id}/status | Update Transaction Status

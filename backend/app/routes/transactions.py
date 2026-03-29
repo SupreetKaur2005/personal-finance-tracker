@@ -26,7 +26,7 @@ def get_transaction_service(db: Session = Depends(get_db)):
 def get_analytics_service(db: Session = Depends(get_db)):
     return AnalyticsService(db)
 
-@router.post("/", response_model=TransactionResponse, status_code=201)
+@router.post("", response_model=TransactionResponse, status_code=201)
 async def create_transaction(
     transaction: TransactionCreate,
     service: TransactionService = Depends(get_transaction_service)
@@ -40,7 +40,7 @@ async def create_transaction(
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.get("/", response_model=List[TransactionResponse])
+@router.get("", response_model=List[TransactionResponse])
 async def list_transactions(
     skip: int = Query(0, ge=0),
     limit: int = Query(100, ge=1, le=1000),

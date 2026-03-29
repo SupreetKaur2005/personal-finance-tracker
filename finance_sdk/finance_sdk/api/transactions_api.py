@@ -852,7 +852,7 @@ class TransactionsApi:
 
         return self.api_client.param_serialize(
             method='POST',
-            resource_path='/transactions/',
+            resource_path='/transactions',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -1915,7 +1915,7 @@ class TransactionsApi:
 
         return self.api_client.param_serialize(
             method='GET',
-            resource_path='/transactions/',
+            resource_path='/transactions',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,

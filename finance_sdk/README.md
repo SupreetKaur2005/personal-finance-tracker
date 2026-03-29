@@ -88,11 +88,11 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**root_get**](docs/DefaultApi.md#root_get) | **GET** / | Root
 *TransactionsApi* | [**batch_reclassify_transactions_batch_reclassify_patch**](docs/TransactionsApi.md#batch_reclassify_transactions_batch_reclassify_patch) | **PATCH** /transactions/batch/reclassify | Batch Reclassify
 *TransactionsApi* | [**bulk_import_transactions_transactions_batch_import_post**](docs/TransactionsApi.md#bulk_import_transactions_transactions_batch_import_post) | **POST** /transactions/batch/import | Bulk Import Transactions
-*TransactionsApi* | [**create_transaction_transactions_post**](docs/TransactionsApi.md#create_transaction_transactions_post) | **POST** /transactions/ | Create Transaction
+*TransactionsApi* | [**create_transaction_transactions_post**](docs/TransactionsApi.md#create_transaction_transactions_post) | **POST** /transactions | Create Transaction
 *TransactionsApi* | [**delete_transaction_transactions_transaction_id_delete**](docs/TransactionsApi.md#delete_transaction_transactions_transaction_id_delete) | **DELETE** /transactions/{transaction_id} | Delete Transaction
 *TransactionsApi* | [**get_financial_insights_transactions_analytics_insights_get**](docs/TransactionsApi.md#get_financial_insights_transactions_analytics_insights_get) | **GET** /transactions/analytics/insights | Get Financial Insights
 *TransactionsApi* | [**get_summary_transactions_summary_get**](docs/TransactionsApi.md#get_summary_transactions_summary_get) | **GET** /transactions/summary | Get Summary
-*TransactionsApi* | [**list_transactions_transactions_get**](docs/TransactionsApi.md#list_transactions_transactions_get) | **GET** /transactions/ | List Transactions
+*TransactionsApi* | [**list_transactions_transactions_get**](docs/TransactionsApi.md#list_transactions_transactions_get) | **GET** /transactions | List Transactions
 *TransactionsApi* | [**reclassify_transaction_transactions_transaction_id_reclassify_patch**](docs/TransactionsApi.md#reclassify_transaction_transactions_transaction_id_reclassify_patch) | **PATCH** /transactions/{transaction_id}/reclassify | Reclassify Transaction
 *TransactionsApi* | [**suggest_category_transactions_suggest_category_post**](docs/TransactionsApi.md#suggest_category_transactions_suggest_category_post) | **POST** /transactions/suggest-category | Suggest Category
 *TransactionsApi* | [**update_transaction_status_transactions_transaction_id_status_patch**](docs/TransactionsApi.md#update_transaction_status_transactions_transaction_id_status_patch) | **PATCH** /transactions/{transaction_id}/status | Update Transaction Status

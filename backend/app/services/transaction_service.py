@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func
-from datetime import datetime
+from datetime import datetime, timedelta
 from app.models.transaction import Transaction, TransactionStatus, TransactionStateError
 from app.schemas.transaction_schema import TransactionCreate
 from app.services.categorizer import SmartCategorizer
@@ -51,9 +51,8 @@ class TransactionService:
         
         # Step 4: Check for duplicates
         # Fetch recent transactions for duplicate check
-        cutoff_time = datetime.utcnow() - datetime.timedelta(minutes=30) if 'timedelta' in globals() else datetime.utcnow()
         recent_txns = self.db.query(Transaction).filter(
-            Transaction.created_at >= (datetime.utcnow() - __import__('datetime').timedelta(minutes=30))
+            Transaction.created_at >= (datetime.utcnow() - timedelta(minutes=30))
         ).all()
         existing_dicts = [txn.to_dict() for txn in recent_txns]
         
